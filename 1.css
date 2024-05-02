@@ -1,0 +1,59 @@
+#actions {
+  font-family: sans-serif;
+  list-style-type: none;
+}
+
+#actions > li {
+  padding-top: 1em;
+}
+
+#actions > li > a {
+  text-decoration: none;
+}
+
+.dfc {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.drawing {
+  border-color: orange;
+  border-radius: 5%;
+  border-style: solid;
+  border-width: 4px;
+  margin: 1em;
+}
+
+img.drawing,
+.drawing > img {
+  height: 370px;
+  width: 265px;
+}
+
+#drawing {
+  display: none;
+}
+
+#drawing > img {
+  cursor: pointer;
+}
+
+#error-banner {
+  background-color: red;
+  box-sizing: border-box;
+  display: none;
+  padding: 1em;
+  word-break: break-all;
+}
+
+#error-banner > h2 {
+  font-family: sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 0;
+}
+
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+}
