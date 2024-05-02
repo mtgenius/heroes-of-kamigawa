@@ -12,27 +12,36 @@
   text-decoration: none;
 }
 
-.dfc {
-  display: inline-flex;
-  flex-direction: row;
-}
-
-.drawing {
+.card {
   border-color: orange;
   border-radius: 5%;
   border-style: solid;
   border-width: 4px;
   margin: 1em;
+  overflow: hidden;
 }
 
-img.drawing,
-.drawing > img {
+.card > img,
+img.card {
   height: 370px;
   width: 265px;
 }
 
+.dfc {
+  display: inline-flex;
+  flex-direction: row;
+}
+
 #drawing {
   display: none;
+}
+
+#drawing > div {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #drawing img {

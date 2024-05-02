@@ -77,14 +77,14 @@ function mapMultiverseIdToSrc(id) {
 function mapCardToElement(card) {
   if (!Array.isArray(card)) {
     var img = document.createElement('img');
-    img.className = 'drawing';
+    img.className = 'card';
     img.setAttribute('src', mapMultiverseIdToSrc(card));
     return img;
   }
 
   // Dual-faced card
   var element = document.createElement('span');
-  element.className = 'dfc drawing';
+  element.className = 'card dfc';
   var front = document.createElement('img');
   var back = document.createElement('img');
   front.setAttribute('src', mapMultiverseIdToSrc(card[0]));
@@ -103,6 +103,7 @@ function renderDrawing() {
   DRAWING_LI.innerHTML = '<p>' +
     'Put ' + (DRAWING.length - 2) + ' of these cards into your hand.' +
   '</p>';
+  const drawingDiv = document.createElement('div');
   for (var i = 0; i < DRAWING.length; i++) {
     var card = DRAWING[i];
     var element = mapCardToElement(card);
@@ -120,8 +121,9 @@ function renderDrawing() {
       renderDrawing();
     }
     element.addEventListener('click', handleClick.bind(element, i));
-    DRAWING_LI.appendChild(element);
+    drawingDiv.appendChild(element);
   }
+  DRAWING_LI.appendChild(drawingDiv);
   DRAWING_LI.style.setProperty('display', 'list-item');
 }
 
