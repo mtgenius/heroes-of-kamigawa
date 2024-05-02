@@ -1,6 +1,7 @@
 #actions {
   font-family: sans-serif;
   list-style-type: none;
+  padding: 0;
 }
 
 #actions > li {
@@ -34,7 +35,7 @@ img.drawing,
   display: none;
 }
 
-#drawing > img {
+#drawing img {
   cursor: pointer;
 }
 
